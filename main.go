@@ -9,7 +9,9 @@ import (
 var _ types.Manager = &X{}
 
 // A service
+// All its public method will be an endpoint
 type X struct {
+	// add some helper functions for common services
 	talk.Service
 }
 
@@ -26,6 +28,7 @@ func (x *X) Get() types.Profile {
 
 // Another service
 type Y struct {
+	talk.Service
 }
 
 // Here we call service X inside the service Y, the "talk" lib will generate a special instance of
