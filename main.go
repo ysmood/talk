@@ -9,7 +9,7 @@ import (
 var _ types.Manager = &X{}
 
 // A service
-// All its public method will be an endpoint
+// All its public methods will be public endpoints
 type X struct {
 	// add some helper functions for common services
 	talk.Service
